@@ -1,0 +1,467 @@
+
+.btn {
+  border: 1px solid #dedede;
+  box-sizing: border-box;
+  border-radius: 2px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  font-weight: bold;
+  letter-spacing: 1px;
+  overflow: hidden;
+  text-decoration: none;
+  font-style: normal;
+  position: relative;
+}
+.btn.primary-btn {
+  background: linear-gradient(180deg, #d37925 0%, #e3d026 100%);
+  border-color: #ece005;
+  filter: drop-shadow(0px 8px 16px rgba(179, 255, 18, 0.5));
+  font-size:26px;
+  color:white;
+}
+
+.btn i{
+    padding: 10px;
+    font-size: 30px;
+    color: #000;
+}
+.btn.primary-btn:active {
+  background: #b3ff12;
+}
+.btn:active {
+  border-color: #7d818c;
+  box-shadow: inset -1px 0px 1px 1px #999eab, inset 2px 2px 1px 1px #999eab;
+}
+.btn.animated::after,
+.btn.animated-long::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  width: 5px;
+  height: 200%;
+  transform: rotate(45deg);
+  background: white;
+  animation: shine-long 2s linear infinite;
+}
+.btn.animated-long::after {
+  animation: shine 1.6s linear infinite;
+}
+@keyframes shine {
+  from {
+    left: 25%;
+    opacity: 0;
+  }
+  40%,
+  60% {
+    opacity: 0.35;
+    width: 8px;
+  }
+  to {
+    left: 75%;
+    opacity: 0;
+  }
+}
+@keyframes shine-long {
+  from {
+    left: 10%;
+    opacity: 0;
+  }
+  40%,
+  60% {
+    opacity: 0.35;
+    width: 8px;
+  }
+  to {
+    left: 90%;
+    opacity: 0;
+  }
+}
+
+.pre-header {
+  height: 50px;
+  background: var(--preheader) no-repeat center ;
+  background-size: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: #D4AF37;
+}
+
+.pre-header__item {
+  display: flex;
+  padding: 0 15px;
+}
+.pre-header__item2 {
+  padding: 0 15px;
+}
+.pre-header__item::before {
+  content: '';
+  display: inline-block;
+  height: 56px;
+  width: 56px;
+  background: no-repeat center;
+  margin: 2px 0;
+}
+.header {
+  height: 250px;
+  background: var(--primary) var(--img-logo) no-repeat center ;
+  position: relative;
+  background-size: 350px;
+  
+}
+.mobile_no {
+     color: #e3d026;
+    float: left;
+    font-size: 15px;
+    padding: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 16px;
+}
+
+.mobile_no2 {
+    color: #e3d026;
+    float: right;
+    font-size: 15px;
+    padding: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 16px;
+}
+
+.header::after {
+  /*position: absolute;*/
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: '';
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0.4;
+}
+.banner {
+  background: var(--img-banner) no-repeat top / cover;
+  color: white;
+  display: flex;
+  height: 470px;
+  flex-direction: column;
+  font-style: italic;
+  padding: 16px 16px 19px;
+}
+
+.img-banner{
+  width: 20px;
+}
+.banner__title {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 27px;
+  margin-left: 35px;
+}
+.banner__title__header-line-1 {
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--bitter-lime);
+  width: fit-content;
+  text-shadow: 1px 1px 2px var(--black), 0 0 1em var(--black), 0 0 0.2em var(--black);
+  margin-left: 10px;
+}
+.banner__title__header-line-2 {
+  font-size: 72px;
+  line-height: 60px;
+  font-weight: 900;
+}
+.banner__title__header-line-3 {
+  font-size: 20px;
+  line-height: 30px;
+}
+.banner__title__header-line-4 {
+  font-size: 55px;
+  line-height: 38px;
+  color: var(--bitter-lime);
+  font-weight: 900;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+}
+.banner .btn {
+  margin-bottom: 22px;
+}
+.banner .bonus-code-wrapper {
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 900;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.04em;
+}
+.banner .bonus-code-wrapper__title {
+  font-size: 16px;
+  line-height: 16px;
+  margin-right: 10px;
+}
+.banner .bonus-code-wrapper__code {
+  text-transform: uppercase;
+  position: relative;
+  background-color: rgba(var(--green-ryb), 0.33);
+  font-size: 20px;
+  line-height: 22px;
+  padding: 1px 7px;
+  width: auto;
+  display: inline-block;
+}
+.features {
+  padding: 24px 16px 50px;
+  background: var(--primary);
+  color: white;
+}
+.features__title {
+  font-style: italic;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 38px;
+  text-align: center;
+  text-transform: capitalize;
+  margin: 0 0 14px 0;
+  letter-spacing: 1px;
+}
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.features-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 15px;
+}
+.features-list__item::before {
+  content: '';
+  display: inline-block;
+  height: 56px;
+  width: 56px;
+  background: no-repeat center;
+  margin: 2px 0;
+}
+.features-list__item.support::before {
+  background-image: var(--img-support-icon);
+}
+.features-list__item.payment::before {
+  background-image: var(--img-payment-icon);
+}
+.features-list__item.shield::before {
+  background-image: var(--img-shield);
+}
+.features-list__item.withdrawal::before {
+  background-image: var(--img-withdrawal-icon);
+}
+.footer {
+  height: 56px;
+  background-color: var(--footer-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:30px;
+}
+.footer__icons {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row;
+  width: 50%;
+}
+.footer__icons .icon {
+  height: 40px;
+  width: 33px;
+  margin: 0;
+}
+.footer__icons .icon.pci {
+  background: var(--img-pci-brand) no-repeat center / contain;
+  width: 50px;
+  height: 19px;
+}
+.footer__icons .icon.plus-18 {
+  background: var(--img-18-plus) no-repeat center / contain;
+  width: 16px;
+  height: 16px;
+}
+.footer__icons .icon.gamcare {
+  background: var(--img-gamcare-logo) no-repeat center / contain;
+  width: 20px;
+  height: 22px;
+  margin: 0 10px;
+}
+.footer__icons .icon.ssl {
+  background: var(--img-ssl) no-repeat center / contain;
+  width: 15px;
+  height: 18px;
+}
+.post-footer {
+  color: white;
+  padding: 15px 16px 20px;
+  background: var(--post-footer-color);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+}
+.post-footer__warning-message {
+  margin-bottom: 20px;
+  color: var(--post-footer-warning-message-color);
+}
+:root {
+  --preheader: #185752 /*#052f33*/;
+  --primary: #2e2e61;
+  --secondary: #e5e5e5;
+  --bitter-lime: #beff36;
+  --black: #000000;
+  --cadet-blue-crayola: #b3b9c8;
+  --cool-grey: #808aa4;
+  --green-ryb: 114, 163, 11;
+  --space-cadet: #132755;
+  --img-logo: url(../images/header.png) ;
+  --img-18-plus: url(../images/18-plus.svg);
+  --img-gamcare-logo: url(../images/gamcare-logo.svg);
+  --img-pci-brand: url(../images/pci-brand.svg);
+  --img-shield: url(../images/shield.svg);
+  --img-ssl: url(../images/ssl.svg);
+  --img-banner: url(../images/banner.png);
+  --img-support-icon: url(../images/support.svg);
+  --icon-secure: url(../images/secure-icon.svg);
+  --img-payment-icon: url(../images/payment.svg);
+  --img-withdrawal-icon: url(../images/withdrawal.svg);
+  --primary-color: #313132;
+  --footer-color: var(--space-cadet);
+  --footer-icon-color: var(--cadet-blue-crayola);
+  --post-footer-color: var(--primary);
+  --post-footer-warning-message-color: var(--cool-grey);
+}
+body {
+  font: 14px 'Cera Pro', sans-serif;
+  color: var(--primary-color);
+  font-feature-settings: 'pnum', 'lnum';
+  background-color: var(--primary);
+}
+body * {
+  box-sizing: border-box;
+}
+body .btn.primary-btn {
+  text-transform: uppercase;
+}
+.header {
+  border-bottom: 1px solid #263863;
+}
+
+
+
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (max-width: 600px) {
+
+  .header{
+    height: 250px;
+    background-size: 250px;
+    position: relative;
+    background-position: center;
+    
+  }
+  .mobile_no {
+    font-size: 10px;
+    float: left;
+  }
+  .mobile_no2 {
+    font-size: 10px;
+    float: right;
+  }
+}
+
+
+
+/*Gallery section*/
+
+/*
+  The grid itself needs only 4 CSS declarations:
+*/
+
+.myGallery {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.myGallery img {
+ width: 80%;
+    height: 480px;
+
+}
+
+/*
+  And here are some declarations for the image caption.
+  Just hover over one of the last 5 images to see it.
+*/
+
+.myGallery .item {
+  position: relative;
+  overflow: hidden;
+}
+
+.myGallery .item img {
+  vertical-align: middle;
+}
+
+.myGallery .caption {
+  margin: 0;
+  padding: 1em;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  transition: transform 0.5s;
+  transform: translateY(100%);
+  background: rgba(0, 0, 0, 0.7);
+  color: rgb(255, 255, 255);
+}
+
+.myGallery .item:hover .caption {
+  transform: translateY(0%);
+}
+
+/*
+  The rest is only styling for this example page
+*/
+
+
+
+
+.myGallery {
+  font-size: 1rem;
+  padding:14px 130px;
+}
+
+/*End gallery section*/
+
+.video .vid {
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom:30px;
+    margin-top:30px;
+}
+
