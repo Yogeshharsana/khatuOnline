@@ -114,7 +114,7 @@
   height: 250px;
   background: var(--primary) var(--img-logo-2) no-repeat center ;
   position: relative;
-  background-size: 350px;
+  background-size: 450px;
   
 }
 .mobile_no {
@@ -400,6 +400,7 @@ body .btn.primary-btn {
     background-size: 179px;
     position: relative;
     background-position: center;
+    background-size: 100%;
     
   }
   .mobile_no {
