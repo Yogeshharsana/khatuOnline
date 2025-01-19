@@ -355,14 +355,14 @@
   --cool-grey: #808aa4;
   --green-ryb: 114, 163, 11;
   --space-cadet: #132755;
-  --img-logo: url(../images/Banner.jpeg) ;
+  --img-logo: url(../images/anner.jpeg) ;
   --img-logo-2: url(../images/banner.png);
   --img-18-plus: url(../images/18-plus.svg);
   --img-gamcare-logo: url(../images/gamcare-logo.svg);
   --img-pci-brand: url(../images/pci-brand.svg);
   --img-shield: url(../images/shield.svg);
   --img-ssl: url(../images/ssl.svg);
-  --img-banner: url(../images/Banner.jpeg);
+  --img-banner: url(../images/Banner.jpg);
   --img-support-icon: url(../images/support.svg);
   --icon-secure: url(../images/secure-icon.svg);
   --img-payment-icon: url(../images/payment.svg);
@@ -400,7 +400,7 @@ body .btn.primary-btn {
     background-size: 179px;
     position: relative;
     background-position: center;
-    background-size: 100%;
+    background-size: 10%;
     
   }
   .mobile_no {
